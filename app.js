@@ -11,6 +11,5 @@ app.get("/docs", (req, res) => {
     return res.status(200).json(docs);
 });
 
-app.listen(8080, function(){
-    console.log("Server Started");
-});
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
