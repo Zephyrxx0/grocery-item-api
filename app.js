@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const docs = require("./docs.json");
 
+const cors = require('cors');
+app.use(cors()); // Allow all origins
+
 // ✅ Serve static images from the /images folder
 app.use("/images", express.static(__dirname + "/images"));
 
