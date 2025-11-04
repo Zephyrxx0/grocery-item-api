@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const docs = require("./docs.json");
 
+app.use("/images", express.static("images"));
+
 const routes = require("./routes/routes.js");
 app.use("/", routes);
 
